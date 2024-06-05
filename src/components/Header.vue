@@ -3,13 +3,18 @@
     <a href="#">خانه</a>
     <a href="#">افزودن رستوران</a>
     <a href="#">ویرایش رستوران</a>
-    <a href="#">خروج</a>
+    <a href="#" @click="logOut">خروج</a>
 
     </div>
 </template>
 
 <script setup>
-
+import { useRouter } from 'vue-router'
+const router = useRouter()
+const logOut = () => {
+    localStorage.clear()
+    router.push({name:'Login'})
+}
 </script>
 
 <style  scoped>
