@@ -12,10 +12,27 @@
     </div>
 </template>
 <script setup>
-import { reactive } from 'vue'
+import { reactive,onMounted } from 'vue'
+import axios from 'axios'
+import { useRouter } from 'vue-router'
+const router = useRouter()
 const user = reactive({
     email: "",
     password: ""
 });
 
+const login = async () => {
+    let result = await axios.get(
+        `http://localhost:3000/users?email=${user.email}&password=${user.password}`)
+    if(result.status==200 && result.data.length > 0 ){
+        localStorage.setItem("user-info",JSON.stringify(result.data[0]))
+        router.push({name:'Home'})
+    }
+}
+onMounted(() => {
+    let user=localStorage.getItem('user-info')
+    if(user){
+        router.push({name:'Home'})
+    }
+})
 </script>
