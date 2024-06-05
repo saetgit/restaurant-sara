@@ -12,7 +12,7 @@
 </template>
 
 <script setup>
-import { reactive } from 'vue'
+import { reactive,onMounted } from 'vue'
 import axios from 'axios'
 import { useRouter } from 'vue-router'
 const router = useRouter()
@@ -35,7 +35,12 @@ const signUp = async () => {
         router.push({name:'Home'})
     }
 }
-
+onMounted(() => {
+    let user=localStorage.getItem('user-info')
+    if(user){
+        router.push({name:'Home'})
+    }
+})
 </script>
 
 <style scoped>
