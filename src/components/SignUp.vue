@@ -14,6 +14,9 @@
 <script setup>
 import { reactive } from 'vue'
 import axios from 'axios'
+import { useRouter } from 'vue-router'
+const router = useRouter()
+
 const user = reactive({
     name: "",
     email: "",
@@ -28,8 +31,8 @@ const signUp = async () => {
         name: user.name
     })
     if(result.status==201){
-        alert("signUp-done!");
         localStorage.setItem("user-info",JSON.stringify(result.data))
+        router.push({name:'Home'})
     }
 }
 
