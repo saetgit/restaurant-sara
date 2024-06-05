@@ -6,7 +6,8 @@
             <input type="text" v-model="user.name" placeholder="لطفا نام خود را وارد کنید" />
             <input type="text" v-model="user.email" placeholder="لطفا ایمیل خود را وارد کنید" />
             <input type="password" v-model="user.password" placeholder="لطفا رمزعبور خود را وارد کنید" />
-            <button @click="signUp">ثبت نام</button>
+            <button @click="signUp">ثبت نام</button><br>
+            <router-link to="/login">ورود</router-link>
         </div>
     </div>
 </template>
@@ -44,32 +45,5 @@ onMounted(() => {
 </script>
 
 <style scoped>
-.signup {
-    text-align: center;
-}
 
-.logo {
-    width: 100px;
-}
-
-.register input {
-    width: 300px;
-    height: 40px;
-    padding-left: 20px;
-    display: block;
-    margin-bottom: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    border: 1px solid skyblue;
-    text-align: right;
-}
-
-.register button {
-    width: 320px;
-    height: 40px;
-    border: 1px solid skyblue;
-    background: skyblue;
-    color: white;
-    cursor: pointer;
-}
 </style>
