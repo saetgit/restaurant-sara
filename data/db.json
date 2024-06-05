@@ -17,30 +17,14 @@
       "email": "ddd",
       "password": "ddd",
       "name": "dd"
-    },
+    }
+  ],
+  "restaurant":[
     {
-      "id": "f388",
-      "email": "ddd",
-      "password": "ddd",
-      "name": "dd"
-    },
-    {
-      "id": "c9bd",
-      "email": "llll",
-      "password": "lllll",
-      "name": "lll"
-    },
-    {
-      "id": "db33",
-      "email": "fff",
-      "password": "fff",
-      "name": "fff"
-    },
-    {
-      "id": "943e",
-      "email": "eeee",
-      "password": "eee",
-      "name": "eee"
+      "id":1,
+      "name":"burger",
+      "contact":1234321,
+      "address":"bojnourd"
     }
   ]
 }
