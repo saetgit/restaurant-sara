@@ -6,6 +6,9 @@
 </template>
 
 <style>
+body{
+  margin: 0;
+}
 .signup,
 .login {
   text-align: center;

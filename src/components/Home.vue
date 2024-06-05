@@ -1,13 +1,18 @@
 <template>
     <div>
-        home
+        <Header/>
     </div>
 </template>
 
 <script setup>
+import Header from './Header.vue'
+
 import { onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 const router = useRouter()
+components:{
+    Header
+}
 onMounted(() => {
     let user=localStorage.getItem('user-info')
     if(!user){
