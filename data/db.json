@@ -19,12 +19,18 @@
       "name": "dd"
     }
   ],
-  "restaurant":[
+  "restaurant": [
     {
-      "id":1,
-      "name":"burger",
-      "contact":1234321,
-      "address":"bojnourd"
+      "id": "1",
+      "name": "burger",
+      "contact": 1234321,
+      "address": "bojnourd"
+    },
+    {
+      "id": "152b",
+      "name": "غذای محلی بانو",
+      "address": "خیابان طالقانی",
+      "contact": "۱۲۳۴۵"
     }
   ]
 }
