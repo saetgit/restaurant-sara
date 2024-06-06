@@ -16,7 +16,9 @@
                     <td>{{ item.name }}</td>
                     <td>{{ item.contact }}</td>
                     <td>{{ item.address }}</td>
-                    <td><router-link :to="'/Update/'+item.id">ویرایش</router-link></td>
+                    <td><router-link :to="'/Update/' + item.id">ویرایش</router-link>
+                        <button @click="deleteRestaurant(item.id)">حذف</button>
+                    </td>
                 </tr>
             </table>
         </div>
@@ -29,14 +31,25 @@ import Header from './Header.vue'
 import axios from 'axios'
 import { ref } from 'vue'
 import { onMounted } from 'vue'
-import { useRouter } from 'vue-router'
+import { useRouter, useRoute } from 'vue-router'
 const router = useRouter()
+const route = useRoute()
 components: {
     Header
 }
 const name = ref('')
 const restaurant = ref([])
-onMounted(async () => {
+
+
+
+const deleteRestaurant = async (id) => {
+    let result = await axios.delete(`http://localhost:3000/restaurant/${id}`);
+    if (result.status == 200) {
+        loadData()
+    }
+}
+
+const loadData = async () => {
     let user = localStorage.getItem('user-info')
     name.value = JSON.parse(user).name;
     if (!user) {
@@ -44,6 +57,9 @@ onMounted(async () => {
     }
     let result = await axios.get("http://localhost:3000/restaurant")
     restaurant.value = result.data
+}
+onMounted(() => {
+    loadData()
 })
 </script>
 

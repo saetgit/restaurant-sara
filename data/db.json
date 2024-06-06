@@ -7,30 +7,5 @@
       "password": "123456"
     }
   ],
-  "restaurant": [
-    {
-      "name": "ddddtyyuu",
-      "address": "dd",
-      "contact": "dd",
-      "id": "1"
-    },
-    {
-      "name": "ddd",
-      "address": "ddd",
-      "contact": "ddd",
-      "id": "2"
-    },
-    {
-      "name": "iiii",
-      "address": "iiii",
-      "contact": "ییییی",
-      "id": "3"
-    },
-    {
-      "name": "ffff",
-      "address": "fff",
-      "contact": "fffffffff",
-      "id": "ef43"
-    }
-  ]
+  "restaurant": []
 }
