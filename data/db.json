@@ -1,36 +1,36 @@
 {
   "users": [
     {
-      "id": "2c48",
+      "id": "1",
+      "name": "sara",
       "email": "sara@gmail.com",
-      "password": "1234567",
-      "name": "سارا"
-    },
-    {
-      "id": "4b3a",
-      "email": "wwww@w.com",
-      "password": "ddddd",
-      "name": "www"
-    },
-    {
-      "id": "05a4",
-      "email": "ddd",
-      "password": "ddd",
-      "name": "dd"
+      "password": "123456"
     }
   ],
   "restaurant": [
     {
-      "id": "1",
-      "name": "burger",
-      "contact": 1234321,
-      "address": "bojnourd"
+      "name": "ddddtyyuu",
+      "address": "dd",
+      "contact": "dd",
+      "id": "1"
     },
     {
-      "id": "152b",
-      "name": "غذای محلی بانو",
-      "address": "خیابان طالقانی",
-      "contact": "۱۲۳۴۵"
+      "name": "ddd",
+      "address": "ddd",
+      "contact": "ddd",
+      "id": "2"
+    },
+    {
+      "name": "iiii",
+      "address": "iiii",
+      "contact": "ییییی",
+      "id": "3"
+    },
+    {
+      "name": "ffff",
+      "address": "fff",
+      "contact": "fffffffff",
+      "id": "ef43"
     }
   ]
 }

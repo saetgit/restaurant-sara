@@ -42,6 +42,7 @@ onMounted(() => {
         router.push({ name: 'SignUp' })
     }
 })
+
 </script>
 
 <style scoped></style>
