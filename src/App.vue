@@ -6,12 +6,14 @@
 </template>
 
 <style>
-body{
+body {
   margin: 0;
 }
+
 .signup,
-.login {
+.login, .Add {
   text-align: center;
+  margin-top: 20px;
 }
 
 .logo {
@@ -19,7 +21,8 @@ body{
 }
 
 .register input,
-.login input {
+.login input,
+.Add input {
   width: 300px;
   height: 40px;
   padding-left: 20px;
@@ -32,7 +35,8 @@ body{
 }
 
 .register button,
-.login button {
+.login button,
+.Add button {
   width: 320px;
   height: 40px;
   border: 1px solid skyblue;
