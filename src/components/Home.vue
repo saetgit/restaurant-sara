@@ -10,11 +10,13 @@
                     <td>نام رستوران</td>
                     <td>شماره رستوران</td>
                     <td>آدرس رستوران</td>
+                    <td>عملیات</td>
                 </tr>
                 <tr v-for="item in restaurant" :key="item.key">
                     <td>{{ item.name }}</td>
                     <td>{{ item.contact }}</td>
                     <td>{{ item.address }}</td>
+                    <td><router-link :to="'/Update/'+id">ویرایش</router-link></td>
                 </tr>
             </table>
         </div>

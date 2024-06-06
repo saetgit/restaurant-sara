@@ -2,7 +2,6 @@
     <div class="nav">
     <router-link to="/" href="#">خانه</router-link>
     <router-link to="/Add" href="#">افزودن رستوران</router-link>
-    <router-link to="/Update" href="#">ویرایش رستوران</router-link>
     <a href="#" @click="logOut">خروج</a>
 
     </div>

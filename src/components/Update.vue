@@ -1,19 +1,29 @@
 <template>
     <div>
         <Header/>
-        <p>Update</p>
+        <form class="Add">
+            <input type="text" name="name" placeholder="نام رستوران را وارد کنید" v-model="restaurant.name" />
+            <input type="text" name="address" placeholder="آدرس رستوران را وارد کنید" v-model="restaurant.address" />
+            <input type="text" name="contact" placeholder="شماره رستوران را وارد کنید" v-model="restaurant.contact" />
+            <button type="button" @click="addRestaurant">ویرایش رستوران</button>
+        </form>
     </div>
 </template>
 
 <script setup>
 import Header from './Header.vue'
 
-import { onMounted } from 'vue'
+import { onMounted,reactive } from 'vue'
 import { useRouter } from 'vue-router'
 const router = useRouter()
 components:{
     Header
 }
+const restaurant = reactive({
+    name: '',
+    address: '',
+    contact: ''
+})
 onMounted(() => {
     let user=localStorage.getItem('user-info')
     if(!user){
